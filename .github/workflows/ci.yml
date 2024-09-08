@@ -1,0 +1,14 @@
+name: Build, test and lint
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    types: [opened, synchronize, reopened, closed]
+    branches: ["main"]
+jobs:
+  frontend_build_lint_test_job:
+    runs-on: ubuntu-latest
+    name: Build, lint and test job
+    steps:
+      - name: Hello world
+        run: echo "Hello world"
